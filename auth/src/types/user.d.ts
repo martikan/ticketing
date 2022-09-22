@@ -25,3 +25,12 @@ export interface UserDoc extends mongoose.Document, UserAttrs {
 	// createdAt: string
 	// updatedAt: string
 }
+
+/**
+ * An interface that describes the properties
+ * of the JWT's body
+ */
+export interface JwtBody {
+	id: string
+	email: string
+}

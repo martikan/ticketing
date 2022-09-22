@@ -1,10 +1,10 @@
 import express, { Request, Response } from 'express'
 import { body } from 'express-validator'
-import { BadRequestError } from '../errors/bad_request_error'
+import { BadRequestError } from '@martikan/common'
 import UserService from '../services/user_service'
 import jwt from 'jsonwebtoken'
 import { PasswordUtils } from '../utils/password_utils'
-import validateRequest from '../middlewares/validate_request'
+import validateRequest from '@martikan/common'
 import { JwtBody } from '../types/user'
 import { JWT_SECRET } from '../app'
 

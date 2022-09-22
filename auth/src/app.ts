@@ -5,8 +5,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import { usersRouter } from './routes/users'
 import { authRouter } from './routes/authentication'
-import { errorHandler } from './middlewares/error_handler'
-import { NotFoundError } from './errors/not_found_error'
+import { errorHandler, NotFoundError } from '@martikan/common'
 import cookieSession from 'cookie-session'
 
 dotenv.config()
@@ -19,6 +18,8 @@ const PORT: number = process.env.PORT ? parseInt(process.env.PORT as string, 10)
 const DATASOURCE_URL: string | undefined = process.env.DATASOURCE_URL
 
 const DATASOURCE_DB: string | undefined = process.env.DATASOURCE_DB
+
+const JWT_SECRET: string = process.env.JWT_SECRET ? process.env.JWT_SECRET : ''
 
 /**
  * API version numbers
@@ -55,4 +56,4 @@ app.all('*', async () => {
  */
 app.use(errorHandler)
 
-export { app, PORT, DATASOURCE_URL, DATASOURCE_DB }
+export { app, PORT, DATASOURCE_URL, DATASOURCE_DB, JWT_SECRET }
