@@ -1,3 +1,4 @@
+import { CustomSerializeError } from '../types/error'
 import { CustomError } from './custom_error'
 
 export class UnauthorizedError extends CustomError {

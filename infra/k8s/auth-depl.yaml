@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
         - name: auth
-          image: martikan/ticketing-auth:0.0.3
+          image: martikan/ticketing-auth:0.0.6
           resources:
             limits:
-              memory: "128Mi"
+              memory: "512Mi"
               cpu: "500m"
           ports:
             - containerPort: 4000

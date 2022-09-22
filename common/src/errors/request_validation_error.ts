@@ -1,5 +1,6 @@
 import { ValidationError } from 'express-validator'
 import R from 'ramda'
+import { CustomSerializeError } from '../types/error'
 import { CustomError } from './custom_error'
 
 const formatErr = (e: { msg: string; param: any }): CustomSerializeError => {

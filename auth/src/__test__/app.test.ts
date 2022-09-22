@@ -1,6 +1,5 @@
-import assert from 'assert'
 import request from 'supertest'
-import { app, PORT } from '../app'
+import { app } from '../app'
 
 describe('Main App tests', () => {
 	it('shoud returns 404, when page is not found', async () => {

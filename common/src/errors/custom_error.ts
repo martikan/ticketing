@@ -1,3 +1,5 @@
+import { CustomSerializeError } from '../types/error'
+
 export abstract class CustomError extends Error {
 	abstract statusCode: number
 

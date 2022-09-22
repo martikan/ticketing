@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
  * An interface that describes the properties that
  * are required to create a new user
  */
-interface UserAttrs {
+export interface UserAttrs {
 	email: string
 	password: string
 }
@@ -13,7 +13,7 @@ interface UserAttrs {
  * An interface that describes the properties
  * that a user model has
  */
-interface UserModel extends mongoose.Model<UserDoc> {
+export interface UserModel extends mongoose.Model<UserDoc> {
 	build(attrs: UserAttrs): UserDoc
 }
 
@@ -21,16 +21,7 @@ interface UserModel extends mongoose.Model<UserDoc> {
  * An interface that describes the properties
  * that a user document has
  */
-interface UserDoc extends mongoose.Document, UserAttrs {
+export interface UserDoc extends mongoose.Document, UserAttrs {
 	// createdAt: string
 	// updatedAt: string
-}
-
-/**
- * An interface that describes the properties
- * of the JWT's body
- */
-interface JwtBody {
-	id: string
-	email: string
 }
