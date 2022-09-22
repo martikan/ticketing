@@ -20,8 +20,6 @@ const DATASOURCE_URL: string | undefined = process.env.DATASOURCE_URL
 
 const DATASOURCE_DB: string | undefined = process.env.DATASOURCE_DB
 
-const JWT_SECRET: string = process.env.JWT_SECRET ? process.env.JWT_SECRET : ''
-
 /**
  * API version numbers
  */
@@ -57,4 +55,4 @@ app.all('*', async () => {
  */
 app.use(errorHandler)
 
-export { app, PORT, DATASOURCE_URL, DATASOURCE_DB, JWT_SECRET }
+export { app, PORT, DATASOURCE_URL, DATASOURCE_DB }
